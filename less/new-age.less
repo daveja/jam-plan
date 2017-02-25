@@ -133,18 +133,28 @@ p {
 
 // Homepage Header
 
+.logo{
+    display:inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
 header {
     position: relative;
     width: 100%;
     min-height: auto;
     overflow-y: hidden;
+    border-bottom: 4px solid #353535;
 
 
 
 background: #134E5E; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #134E5E , #71B280); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+            background: url('../img/veggies.jpg') no-repeat;
+                background-size: cover;
+
+
 
     color: white;
     .header-content {
@@ -158,7 +168,7 @@ background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, F
             h1 {
                 margin-top: 0;
                 margin-bottom: 30px;
-                font-size: 30px;
+                font-size: 50px;
             }
             .list-badges {
                 margin-bottom: 25px;
@@ -189,7 +199,11 @@ background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, F
                 top: 50%;
                 transform: translateY(-50%);
                 h1 {
-                    font-size: 35px;
+                    font-size: 50px;
+                    font-weight: 300;
+                }
+                p{
+                    opacity: 0.6;
                 }
             }
         }
@@ -216,6 +230,7 @@ section {
 }
 
 section.download {
+    border-bottom: 4px solid #353535;
     //background-image: url('../img/strawbs.jpg');
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 59%), url('../img/strawbs.jpg') no-repeat;
     background-size: cover;
@@ -324,6 +339,9 @@ section.cta {
 }
 
 section.contact {
+    border-bottom: 4px solid #353535;
+    background: url('../img/blueberries.jpg') no-repeat;
+                background-size: cover;
     text-align: center;
     h2 {
         margin-top: 0;

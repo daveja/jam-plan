@@ -17,13 +17,30 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.center {
+  text-align: center;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 html {
   background: url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
   background-size: cover;
   height: 100%;
 }
 .form-button {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
 }
 #feedback-page {
   text-align: center;
@@ -48,23 +65,13 @@ html {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
-.fname,
-.lname {
-  display: inline-block;
-}
-.fname label,
-.lname label {
-  display: block;
-}
 .feedback-input {
-  color: #3c3c3c;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  color: #fff;
   font-size: 18px;
   border-radius: 0;
   line-height: 22px;
   background-color: #fbfbfb;
-  padding: 13px 13px 13px 54px;
+  padding: 13px 20px 13px 20px;
   margin-bottom: 10px;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -72,59 +79,63 @@ html {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 100px;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
 }
 .feedback-input:focus {
-  background: #fff;
   box-shadow: 0;
   border: 3px solid #3498db;
   color: #3498db;
   outline: none;
-  padding: 13px 13px 13px 54px;
+  padding: 13px 10px 13px 30px;
 }
 .focused {
   color: #30aed6;
   border: #30aed6 solid 3px;
 }
 /* Icons ---------------------------------- */
-#fname {
-  background-image: url(../img/name.svg);
-  background-size: 30px 30px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-  width: 100%;
-}
-#fname:focus {
-  background-image: url(../img/name.svg);
-  background-size: 30px 30px;
-  background-position: 8px 5px;
-  background-position: 11px 8px;
-  background-repeat: no-repeat;
-}
+#fname,
 #lname {
+  background-image: url(../img/name.svg);
   background-size: 30px 30px;
   background-position: 11px 8px;
   background-repeat: no-repeat;
-  padding: 13px 54px 13px 13px;
-  width: 100%;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
 }
+#fname:focus,
 #lname:focus {
+  background-image: url(../img/name.svg);
   background-size: 30px 30px;
   background-position: 8px 5px;
   background-position: 11px 8px;
   background-repeat: no-repeat;
+  background: rgba(255, 255, 255, 0.9);
 }
 #email {
   background-image: url(../img/email.svg);
   background-size: 30px 30px;
   background-position: 11px 8px;
   background-repeat: no-repeat;
-  width: 88%;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
 }
 #email:focus {
   background-image: url(../img/email.svg);
   background-size: 30px 30px;
   background-position: 11px 8px;
   background-repeat: no-repeat;
+  background: rgba(255, 255, 255, 0.9);
 }
 textarea {
   width: 100%;
@@ -160,11 +171,11 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #fdcc52;
+  color: #e30613;
 }
 a:hover,
 a:focus {
-  color: #fcbd20;
+  color: #b1050f;
 }
 hr {
   max-width: 100px;
@@ -204,11 +215,11 @@ p {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
-  color: #fdcc52;
+  color: #e30613;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #fcbd20;
+  color: #b1050f;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-size: 12px;
@@ -227,11 +238,11 @@ p {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #fdcc52;
+  color: #e30613;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #fdcc52 !important;
+  color: #e30613 !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -267,7 +278,7 @@ p {
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #fdcc52;
+    color: #e30613;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
@@ -275,20 +286,28 @@ p {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #fdcc52;
+    color: #e30613;
   }
+}
+.logo {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 header {
   position: relative;
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
+  border-bottom: 4px solid #353535;
   background: #134E5E;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #134E5E, #71B280);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #134E5E, #71B280);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: url('../img/veggies.jpg') no-repeat;
+  background-size: cover;
   color: white;
 }
 header .header-content {
@@ -304,7 +323,7 @@ header .header-content .header-content-inner {
 header .header-content .header-content-inner h1 {
   margin-top: 0;
   margin-bottom: 30px;
-  font-size: 30px;
+  font-size: 50px;
 }
 header .header-content .header-content-inner .list-badges {
   margin-bottom: 25px;
@@ -337,7 +356,11 @@ header .device-container .screen img {
     transform: translateY(-50%);
   }
   header .header-content .header-content-inner h1 {
-    font-size: 35px;
+    font-size: 50px;
+    font-weight: 300;
+  }
+  header .header-content .header-content-inner p {
+    opacity: 0.6;
   }
   header .device-container {
     max-width: none;
@@ -357,6 +380,7 @@ section h2 {
   font-size: 50px;
 }
 section.download {
+  border-bottom: 4px solid #353535;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 59%), url('../img/strawbs.jpg') no-repeat;
   background-size: cover;
   position: relative;
@@ -462,6 +486,9 @@ section.cta .overlay {
   left: 0;
 }
 section.contact {
+  border-bottom: 4px solid #353535;
+  background: url('../img/blueberries.jpg') no-repeat;
+  background-size: cover;
   text-align: center;
 }
 section.contact h2 {
@@ -536,7 +563,7 @@ footer ul li a.active {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .text-primary {
-  color: #fdcc52;
+  color: #e30613;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -552,8 +579,8 @@ footer ul li a.active {
 .btn-outline:active,
 .btn-outline.active {
   color: white;
-  background-color: #fdcc52;
-  border-color: #fdcc52;
+  background-color: #e30613;
+  border-color: #e30613;
 }
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
