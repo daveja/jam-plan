@@ -6,10 +6,10 @@ $name = filter_var($_POST['fname'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LO
 $lastname = filter_var($_POST['lname'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
  
-$mc = new \Drewm\MailChimp('11231ec05c47961ca5f3268e231a07e1-us14');
+$mc = new \Drewm\MailChimp('[API KEY GOES HERE]');
 $mvars = array('optin_ip'=> $_SERVER['REMOTE_ADDR'], 'FNAME' => $name, 'LNAME' => $lastname, 'MMERGE3' => 'VALUE_FOR_OPT_MERGEFIELD');
 $result = $mc->call('lists/subscribe', array(
-		'id'                => 'c9a2bd7627',
+		'id'                => '[ID GOES HERE]',
 		'email'             => array('email'=>$email),
 		'merge_vars'        => $mvars,
 		'double_optin'      => false,
